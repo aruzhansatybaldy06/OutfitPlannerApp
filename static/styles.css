@@ -1,0 +1,202 @@
+/* Resetting default browser margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall layout */
+body {
+    font-family: 'Roboto', sans-serif; /* Google font for a modern look */
+    line-height: 1.6;
+    background-color: #f7f8fc; /* Softer light background */
+    color: #333;
+    padding: 0 20px; /* Slightly more spacing around the content */
+}
+
+/* Header section */
+header {
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient background */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow for a floating effect */
+    margin-bottom: 40px; /* Space between header and content */
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Make header text stand out */
+}
+
+/* Navigation bar */
+nav {
+    background-color: #333;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+nav ul li a:hover {
+    background-color: #28a745; /* Green on hover */
+    transform: translateY(-5px); /* Smooth upward movement */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for extra depth */
+}
+
+nav ul li a:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Focus effect for accessibility */
+}
+
+/* If the user is authenticated, adjust layout for login/logout options */
+nav form {
+    display: inline-block;
+}
+
+nav a {
+    margin-top: 5px;
+    padding: 10px 20px;
+    background-color: #f0ad4e;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ec971f;
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Main content section */
+main {
+    padding: 40px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Larger shadow for emphasis */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+main h2 {
+    font-size: 2.2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Footer section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Style for buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px); /* Hover lift effect */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for the login/register links */
+nav a {
+    margin-top: 5px;
+    padding: 12px 20px;
+    background-color: #28a745;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #218838;
+    transform: translateY(-4px);
+}
+
+/* Profile page styling */
+a[href*='profile'] {
+    background-color: #f0ad4e;
+}
+
+a[href*='profile']:hover {
+    background-color: #ec971f;
+}
+
+/* Responsive design tweaks */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    main {
+        padding: 30px;
+        margin: 20px auto;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,20 @@
+{% extends 'outfit/base.html' %}
+
+{% block title %}Clothes{% endblock %}
+
+{% block content %}
+<section>
+    <h2>This is a list of clothes</h2>
+    <ul>
+        {% for cloth in response %}
+            <li>
+                <h3>
+                    <a href="{% url 'cloth' id=cloth.id %}">{{ cloth.name }}</a>
+                </h3>
+            <p>{{ cloth.category }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <input class="btn btn-success" type="button" value="Add Clothes" onclick="location.href='{% url 'add' %}'" />
+</section>
+{% endblock %}

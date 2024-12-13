@@ -1,0 +1,21 @@
+{% extends 'outfit/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ cloth.name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h2>{{ cloth.name }}</h2>
+    <h3>{{ cloth.category.name }}</h3>
+    <p><strong>Color:</strong> {{ cloth.color }}</p>
+    <p><strong>Fabric:</strong> {{ cloth.fabric }}</p>
+    <p><strong>Brand:</strong> {{ cloth.brand }}</p>
+
+    {% if cloth.image %}
+        <img src="{% static 'assets/clothes/your_image.jpg' %}" alt="{{ cloth.name }}" style="max-width: 100%; height: auto;">
+    {% endif %}
+
+    <a class="btn btn-primary" href="{% url 'clothes' %}">Back to Clothes</a>
+</section>
+{% endblock %}

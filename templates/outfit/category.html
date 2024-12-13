@@ -1,0 +1,16 @@
+{% extends 'outfit/base.html' %}
+
+{% block title %}Clothes of this Category{% endblock %}
+
+{% block content %}
+<section>
+    <h2>This is a list of clothes of this category</h2>
+    <ul>
+        {% for cloth in response %}
+            <li>
+                <h3>{{ cloth.name }}</h3>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
